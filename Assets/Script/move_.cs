@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(Rigidbody))]
 public class move_ : MonoBehaviour
 {
@@ -6,9 +9,12 @@ public class move_ : MonoBehaviour
     private Rigidbody _rb;
 
 
+
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        
     }
 
     // обратите внимание что все действия с физикой 
@@ -20,6 +26,7 @@ public class move_ : MonoBehaviour
 
     private void MovementLogic()
     {
+        Vector3 movement = new Vector3();
         //пк
         /*float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -27,9 +34,12 @@ public class move_ : MonoBehaviour
 
         // android
         Vector3 acceleration = Input.acceleration;
-        Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
+        if (acceleration.sqrMagnitude > 1)
+            acceleration.Normalize();
 
-        _rb.AddForce(movement*Speed);
+         movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
+        _rb.AddForce(movement * Speed);
+
 
     }
 
