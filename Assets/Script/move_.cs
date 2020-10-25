@@ -5,6 +5,7 @@ public class move_ : MonoBehaviour
     public float Speed = 10f;
     private Rigidbody _rb;
 
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -23,10 +24,13 @@ public class move_ : MonoBehaviour
         /*float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);*/
+
         // android
         Vector3 acceleration = Input.acceleration;
         Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
-       
-        _rb.AddForce(movement * Speed);
+
+        _rb.AddForce(movement*Speed);
+
     }
+
 }

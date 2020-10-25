@@ -531,9 +531,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYER
       objectReference: {fileID: 0}
+    - target: {fileID: 5738073791493240522, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
+      propertyPath: m_Mass
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738073791493240522, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738073791493240522, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5738073791493240523, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
       propertyPath: Speed
-      value: 2
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 5738073791493240527, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
       propertyPath: m_LocalPosition.x
