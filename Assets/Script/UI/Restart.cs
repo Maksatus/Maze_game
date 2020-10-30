@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
@@ -7,5 +8,4 @@ public class Restart : MonoBehaviour
    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
    }
-    
 }
