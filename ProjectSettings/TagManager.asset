@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Joystick
+  - Dead
   layers:
   - Default
   - TransparentFX

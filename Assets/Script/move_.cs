@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class move_ : MonoBehaviour
 {
@@ -52,4 +52,11 @@ public class move_ : MonoBehaviour
         _rb.AddForce(movement * Speed);
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Dead")
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
 }
