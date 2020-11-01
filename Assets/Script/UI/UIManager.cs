@@ -4,7 +4,7 @@ public class UIManager : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneTransition.SwitchToScene("Game Scene");
+       SceneManager.LoadScene("Game Scene");
     }
     public void Exit()
     {

@@ -17,7 +17,7 @@ public class GamesManager : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneTransition.SwitchToScene("Start");
+        SceneManager.LoadScene("Start");
     }
     public void QuitGame()
     {

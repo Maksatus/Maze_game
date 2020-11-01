@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: c08a034b0067a0047a839315f67d44a4, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: df15915dcbb4df445aa5edc98017faf9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1931,7 +1931,6 @@ RectTransform:
   - {fileID: 198442852}
   - {fileID: 250507954}
   - {fileID: 2129224804}
-  - {fileID: 1652549874}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2669,11 +2668,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567674825}
   m_CullTransparentMesh: 0
---- !u!224 &1652549874 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-  m_PrefabInstance: {fileID: 213419006758700962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1653855307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,115 +3052,6 @@ Transform:
   m_Father: {fileID: 1294781292}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &213419006758700962
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1294781292}
-    m_Modifications:
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730960, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007264730963, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_Name
-      value: Scene Transition
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007397981160, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007565649205, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 213419007565649211, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8ab41c274d695034c8619eb2b9f4e252, type: 3}
 --- !u!4 &543450652302177372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6428990997809709515, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
