@@ -3,7 +3,6 @@
 public class GamesManager : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    bool status = false;
     public GameObject pauseMenuUI;
     public GameObject JoystickActiv;
 
