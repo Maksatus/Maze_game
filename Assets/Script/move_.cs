@@ -49,7 +49,7 @@ public class move_ : MonoBehaviour
         //    acceleration.Normalize();
         //  Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
 
-        Vector3 movement = new Vector3(joystick.Horizontal, 0.0f, joystick.Vertical);
+        Vector3 movement = new Vector3(-joystick.Horizontal, 0.0f, -joystick.Vertical);
         _rb.AddForce(movement * Speed);
     }
 
