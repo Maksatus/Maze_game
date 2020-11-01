@@ -55,7 +55,7 @@ public class move_ : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Dead")
+        if(other.tag == "Death")
         {
             SceneManager.LoadScene(1);
         }

@@ -789,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5568371526223589888, guid: cef850e76ed7a4e459339278ab54e574, type: 3}
       propertyPath: m_TagString
-      value: Dead
+      value: Death
       objectReference: {fileID: 0}
     - target: {fileID: -2577548232221058511, guid: cef850e76ed7a4e459339278ab54e574, type: 3}
       propertyPath: m_LocalRotation.x
