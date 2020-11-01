@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(Rigidbody))]
 public class move_ : MonoBehaviour
 {
