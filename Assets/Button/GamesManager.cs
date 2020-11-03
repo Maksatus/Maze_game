@@ -36,7 +36,7 @@ public class GamesManager : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         JoystickActiv.SetActive(true);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Pause()
     {

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7968986316495834734}
   - component: {fileID: 5292698905085885092}
   - component: {fileID: 6823767337780292949}
+  - component: {fileID: 6823767337780292948}
   - component: {fileID: 6823767337780292950}
-  - component: {fileID: 8458301239493029871}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: c8dfbb59b2b6bf643a87072f155a01de, type: 2}
   - {fileID: 2100000, guid: 32a76832b79e84347ad9df08b12709c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -101,6 +101,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!135 &6823767337780292948
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941248380500024177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0005974822
+  m_Center: {x: -1.4551915e-10, y: -1.1641532e-10, z: 0}
 --- !u!114 &6823767337780292950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,16 +129,3 @@ MonoBehaviour:
   Speed: 1.5
   calibrationQuaternion: {x: 0, y: 0, z: 0, w: 0}
   joystick: {fileID: 0}
---- !u!135 &8458301239493029871
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5941248380500024177}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.0059748217
-  m_Center: {x: -0.0000000013969839, y: -9.313226e-10, z: 0}
