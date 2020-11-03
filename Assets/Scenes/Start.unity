@@ -207,6 +207,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6202605365049726526, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
   m_PrefabInstance: {fileID: 784415014}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &536623202 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+  m_PrefabInstance: {fileID: 784415014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536623201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86be7cedd12a6a24ebc1fb96d72b66e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &538096917
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,10 +300,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 536623201}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 536623202}
+        m_TargetAssemblyTypeName: SceneLoading, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -537,6 +548,10 @@ PrefabInstance:
       propertyPath: sceneID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: loadingScren
+      value: 
+      objectReference: {fileID: 536623201}
     - target: {fileID: 2488174953865001828, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
