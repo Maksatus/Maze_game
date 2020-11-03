@@ -10,7 +10,9 @@ public class SceneLoading : MonoBehaviour
     [Space]
     public Image LoadingImg;
     public Text progressText;
+    [Header("Скрыть:")]
     public GameObject panel;
+    [Space]
     public GameObject loadingScren;
     public Text tapText;
 
@@ -23,12 +25,13 @@ public class SceneLoading : MonoBehaviour
 
     IEnumerator AsyncLoad()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneID);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneID,LoadSceneMode.Additive);
         asyncLoad.allowSceneActivation = false;
         while (!asyncLoad.isDone)
         {
             float progress = asyncLoad.progress / 0.9f;
-            LoadingImg.fillAmount = progress;
+            LoadingImg.fillAmount = Mathf.Lerp(LoadingImg.fillAmount, progress,
+                Time.deltaTime);
             progressText.text = string.Format("{0:0}%", progress * 100);
             if (asyncLoad.progress>=0.9f && !asyncLoad.allowSceneActivation)
             {
