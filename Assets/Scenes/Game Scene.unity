@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 3dd17ef8b3eba264ea4b016ffd09e334, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d6c3a2255dce0e3438a18824a45bfa3f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -5518,7 +5518,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e7101ee60b046b418bc7a05d385162b, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5987,7 +5987,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e7101ee60b046b418bc7a05d385162b, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6236,7 +6236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e7101ee60b046b418bc7a05d385162b, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6528,7 +6528,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e7101ee60b046b418bc7a05d385162b, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7610,7 +7610,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6f077e8041026ad4591a7949714bd7bc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e7101ee60b046b418bc7a05d385162b, type: 2}
+      objectReference: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 919132149155446097, guid: 6f077e8041026ad4591a7949714bd7bc, type: 3}
       propertyPath: m_Name
       value: lvl_1
@@ -7883,7 +7883,7 @@ PrefabInstance:
     - target: {fileID: 5292698905085885092, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 40c0ef723a0b7224b8cfad2bd6311153, type: 2}
+      objectReference: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 5941248380500024177, guid: c4b5593b473cd1d49a7163b514508362, type: 3}
       propertyPath: m_Name
       value: Player
