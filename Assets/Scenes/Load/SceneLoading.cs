@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SceneLoading : MonoBehaviour
 {
-    [Header("Загружаемая сцена:")]
-    public int sceneID;
+   // [Header("Загружаемая сцена:")]
+    private int sceneID;
     [Space]
     public Image LoadingImg;
     public Text progressText;
@@ -14,8 +14,9 @@ public class SceneLoading : MonoBehaviour
     public GameObject loadingScren;
     public Text tapText;
 
-    public void Load()
+    public void Load(int id)
     {
+        sceneID = id;
         loadingScren.SetActive(true);
         panel.SetActive(false);
         StartCoroutine(AsyncLoad());
@@ -48,7 +49,7 @@ public class SceneLoading : MonoBehaviour
             LoadingImg.fillAmount = i/0.9f;
             progressText.text = string.Format("{0:0}%", (i * 100) / 0.9f);
         }
-        
+        yield return new WaitForSeconds(1);
         tapText.text = string.Format("Tap to screen!");
     }
 }
