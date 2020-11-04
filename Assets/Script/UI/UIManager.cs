@@ -11,13 +11,13 @@ public class UIManager : MonoBehaviour
     }
     public void level()
     {
-        mainMenu.DOAnchorPos(new Vector2(-2100,0), 0.25f);
+        mainMenu.DOAnchorPos(new Vector2(-2065, 0), 0.25f);
         levelMenu.DOAnchorPos(new Vector2(0,0), 0.25f);
     }
     public void closeLevel()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 0.25f);
-        levelMenu.DOAnchorPos(new Vector2(2100, 0), 0.25f);
+        levelMenu.DOAnchorPos(new Vector2(2065, 0), 0.25f);
     }
 
     public void NewGame()
