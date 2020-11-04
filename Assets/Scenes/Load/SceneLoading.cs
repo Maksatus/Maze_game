@@ -25,15 +25,12 @@ public class SceneLoading : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneID);
         asyncLoad.allowSceneActivation = false;
+        StartCoroutine(LoadFake());
+
         while (!asyncLoad.isDone)
         {
-            float progress = asyncLoad.progress / 0.9f;
-            LoadingImg.fillAmount = Mathf.Lerp(LoadingImg.fillAmount, progress,
-                Time.deltaTime); ;
-            progressText.text = string.Format("{0:0}%", progress * 100);
-            if (asyncLoad.progress>=0.9f && !asyncLoad.allowSceneActivation)
-            {
-                StartCoroutine(Text());
+            if (!asyncLoad.allowSceneActivation)
+            {            
                 if(Input.anyKeyDown)
                 {
                     asyncLoad.allowSceneActivation = true;
@@ -42,9 +39,16 @@ public class SceneLoading : MonoBehaviour
             yield return null;
         }
     }
-    IEnumerator Text()
+
+    IEnumerator LoadFake()
     {
-        yield return new WaitForSeconds(2);
+        for (float i = 0; i <= 1; i=i+0.1f)
+        {
+            yield return new WaitForSeconds(0.3f);
+            LoadingImg.fillAmount = i/0.9f;
+            progressText.text = string.Format("{0:0}%", (i * 100) / 0.9f);
+        }
+        
         tapText.text = string.Format("Tap to screen!");
     }
 }
