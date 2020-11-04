@@ -10,7 +10,7 @@ public class SceneLoading : MonoBehaviour
     [Space]
     public Image LoadingImg;
     public Text progressText;
-    public GameObject panel;
+    public GameObject[] panel;
     public GameObject loadingScren;
     public Text tapText;
 
@@ -18,7 +18,11 @@ public class SceneLoading : MonoBehaviour
     {
         sceneID = id;
         loadingScren.SetActive(true);
-        panel.SetActive(false);
+        for (int i = 0; i < panel.Length; i++)
+        {
+            panel[i].SetActive(false);
+        }
+       
         StartCoroutine(AsyncLoad());
     }
 
