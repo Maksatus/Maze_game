@@ -7,8 +7,6 @@ public class GamesManager : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject JoystickActiv;
 
-
-
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))

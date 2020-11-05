@@ -323,8 +323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadingImg: {fileID: 2164552912061364706}
   progressText: {fileID: 2996822820178971513}
-  panel: {fileID: 0}
-  loadingScren: {fileID: 0}
+  panel:
+  - {fileID: 0}
+  loadingScren: {fileID: 6202605365049726526}
   tapText: {fileID: 7709586098594635665}
 --- !u!1 &6694046985938271288
 GameObject:

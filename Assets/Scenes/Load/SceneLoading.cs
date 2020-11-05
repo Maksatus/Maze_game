@@ -10,6 +10,7 @@ public class SceneLoading : MonoBehaviour
     [Space]
     public Image LoadingImg;
     public Text progressText;
+    [Header("Что нужно скрыть:")]
     public GameObject[] panel;
     public GameObject loadingScren;
     public Text tapText;
@@ -30,13 +31,16 @@ public class SceneLoading : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneID);
         asyncLoad.allowSceneActivation = false;
-        StartCoroutine(LoadFake());
 
         while (!asyncLoad.isDone)
         {
             if (!asyncLoad.allowSceneActivation)
-            {            
-                if(Input.anyKeyDown)
+            {
+                float progress = asyncLoad.progress / 0.9f;
+                LoadingImg.fillAmount = progress;
+                progressText.text = string.Format("{0:0}%", progress * 100);
+                tapText.text = string.Format("Tap to screen!");
+                if (Input.anyKeyDown)
                 {
                     asyncLoad.allowSceneActivation = true;
                 }
@@ -49,7 +53,7 @@ public class SceneLoading : MonoBehaviour
     {
         for (float i = 0; i <= 1; i=i+0.1f)
         {
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             LoadingImg.fillAmount = i/0.9f;
             progressText.text = string.Format("{0:0}%", (i * 100) / 0.9f);
         }
