@@ -57,7 +57,7 @@ public class move_ : MonoBehaviour
     {
         if(other.tag == "Death")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
