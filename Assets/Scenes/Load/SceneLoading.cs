@@ -48,16 +48,4 @@ public class SceneLoading : MonoBehaviour
             yield return null;
         }
     }
-
-    IEnumerator LoadFake()
-    {
-        for (float i = 0; i <= 1; i=i+0.1f)
-        {
-            yield return new WaitForSeconds(0.2f);
-            LoadingImg.fillAmount = i/0.9f;
-            progressText.text = string.Format("{0:0}%", (i * 100) / 0.9f);
-        }
-        yield return new WaitForSeconds(1);
-        tapText.text = string.Format("Tap to screen!");
-    }
 }
