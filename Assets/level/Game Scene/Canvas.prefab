@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3078454226775934823}
   - component: {fileID: 3078454226775934824}
   m_Layer: 5
-  m_Name: Setting
+  m_Name: Song
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5024cd09226f961428658e71333f731f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74e8e44766e197a44aa503948d88436c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
