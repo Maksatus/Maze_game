@@ -37,7 +37,9 @@ public class SceneLoading : MonoBehaviour
             if (!asyncLoad.allowSceneActivation)
             {
                 float progress = asyncLoad.progress / 0.9f;
-                LoadingImg.fillAmount = progress;
+                //LoadingImg.fillAmount = progress;
+                LoadingImg.fillAmount = Mathf.Lerp(LoadingImg.fillAmount, progress,
+               Time.deltaTime * 5);
                 progressText.text = string.Format("{0:0}%", progress * 100);
                 tapText.text = string.Format("Tap to screen!");
                 if (Input.anyKeyDown)
