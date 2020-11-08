@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.037646834, g: 0.3206955, b: 0.8867924, a: 1}
+  m_AmbientEquatorColor: {r: 0.20588236, g: 0.3509804, b: 0.4490196, a: 1}
+  m_AmbientGroundColor: {r: 0.8301887, g: 0.6200309, b: 0.19971518, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: e1466517f0324e543bdaa4af82c4cad0, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d6c3a2255dce0e3438a18824a45bfa3f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -465,15 +465,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6894746399039993117, guid: 57ec3e9b76885e440af3bffee792525f, type: 3}
       propertyPath: m_Color.r
-      value: 0.8018868
+      value: 0.6531684
       objectReference: {fileID: 0}
     - target: {fileID: 6894746399039993117, guid: 57ec3e9b76885e440af3bffee792525f, type: 3}
       propertyPath: m_Color.g
-      value: 0.55602527
+      value: 0.7650827
       objectReference: {fileID: 0}
     - target: {fileID: 6894746399039993117, guid: 57ec3e9b76885e440af3bffee792525f, type: 3}
       propertyPath: m_Color.b
-      value: 0.61929846
+      value: 0.7735849
       objectReference: {fileID: 0}
     - target: {fileID: 6894746399039993117, guid: 57ec3e9b76885e440af3bffee792525f, type: 3}
       propertyPath: m_Intensity
@@ -545,7 +545,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e7101ee60b046b418bc7a05d385162b, type: 2}
+  - {fileID: 2100000, guid: b11a6ece194d3d64eaad2b71f9d0ad4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1618,6 +1618,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1844413963}
     m_Modifications:
+    - target: {fileID: 4921730625870900736, guid: 1d293ae1cc3f62145826b9414b8c0ed8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4921730625870900742, guid: 1d293ae1cc3f62145826b9414b8c0ed8, type: 3}
       propertyPath: m_Name
       value: Particle System (1)
