@@ -1196,7 +1196,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
       propertyPath: panel.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
       propertyPath: panel
@@ -1225,7 +1225,7 @@ PrefabInstance:
     - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
       propertyPath: panel.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1369962194}
     - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
       propertyPath: panel.Array.data[4]
       value: 
