@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_CartomWater
-  m_Shader: {fileID: -6465566751694194690, guid: fea729929724e614f86ace088023e12b, type: 3}
+  m_Name: ForseField
+  m_Shader: {fileID: -6465566751694194690, guid: f4b44300a37bcb7488cd398e6f09ec54, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,13 +18,15 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - Pattern:
+        m_Texture: {fileID: 2800000, guid: 76d244e87e4d4314f82d60e405c55d53, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_251A979F: 1
-    - Vector1_4A004907: 5
-    - Vector1_B94F6826: 0.02
-    - Vector1_C2823541: 30
+    - Fresnel_Power: 2
+    - Vector1_A61165C4: 0.01
+    - Vector1_C9CD250C: 0.7
     m_Colors:
-    - Color_82F9BC14: {r: 0.35030255, g: 0.76041335, b: 1.8113205, a: 0}
-    - Color_C60591DF: {r: 0.13218582, g: 0.58297366, b: 0.766, a: 0}
+    - Emissiom: {r: 0.15686275, g: 5.992157, b: 4.4235296, a: 0}
   m_BuildTextureStacks: []
