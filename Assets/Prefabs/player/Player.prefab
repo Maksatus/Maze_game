@@ -93,9 +93,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5941248380500024177}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.1
+  m_Mass: 0.6
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -108,7 +108,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5941248380500024177}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: befede29532358047a19c361f0a9065c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -126,6 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1553274519ee9f74387bb7ffdd8e3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1.5
+  Speed: 2
   calibrationQuaternion: {x: 0, y: 0, z: 0, w: 0}
   joystick: {fileID: 0}
