@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_TornadoShader 2
+  m_Shader: {fileID: -6465566751694194690, guid: 186b8df3554ddc646a3bb2b60e0ec081, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_65635405: 1
+    - Vector1_F3F089AD: 20
+    - Vector1_F78F4502: 0.51
+    - Vector1_F7D7589B: 0.07
+    m_Colors:
+    - Color_7622D850: {r: 0.627451, g: 0.627451, b: 0.627451, a: 0.99215686}
+    - Vector2_64094BAB: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - Vector2_8C361730: {r: 0, g: -0.5, b: 0, a: 0}
+    - Vector2_BBEEA00D: {r: 0.5, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
