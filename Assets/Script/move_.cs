@@ -54,7 +54,7 @@ public class move_ : MonoBehaviour
         _rb.AddForce(movement * Speed);
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Death")
         {
@@ -64,18 +64,15 @@ public class move_ : MonoBehaviour
         {
             GamesManager.GameIsVictory = true;
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag.Equals("MovePlatform"))
+        if (other.tag.Equals("MovePlatform"))
         {
-            this.transform.parent = collision.transform;
+            this.transform.parent = other.transform;
         }
     }
-    private void OnCollisionExit(Collision collision)
+
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag.Equals("MovePlatform"))
+        if (other.tag.Equals("MovePlatform"))
         {
             this.transform.parent = null;
         }
