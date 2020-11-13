@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Electicity
-  m_Shader: {fileID: -6465566751694194690, guid: 13e1a80f636d51349b96814f58a0c52e, type: 3}
+  m_Name: Shader Graphs_GroundLvl_1Shader
+  m_Shader: {fileID: -6465566751694194690, guid: 6b1c75de7d9bd974a9a5aebd448d1dc0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,11 +20,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_49459AEE: 2
-    - Vector1_53107439: -0.447
-    - Vector1_C40D8819: 50
+    - Vector1_7270B0A0: 0.9
+    - Vector1_84596581: 0.15
     m_Colors:
-    - Color_60BC0785: {r: 2.6562016, g: 0.08770482, b: 0.23692526, a: 1}
-    - Vector2_D9BB56AF: {r: -0.05, g: -0.1, b: 0, a: 0}
-    - Vector2_E8E8B79F: {r: 0.05, g: 0.1, b: 0, a: 0}
+    - Color_EA17FB8B: {r: 0, g: 2.7607844, b: 1.5843138, a: 1}
+    - Vector2_626262A3: {r: 4, g: 4, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -8,10 +8,10 @@ public class Utils : MonoBehaviour
         Vector3 startPosition = obj.position;
         float t = 0;
 
-        const float animationDuration = 1.5f;
+        const float animationDuration = 2f;
         while (t<1)
         {
-            obj.position = Vector3.Lerp(startPosition, target, t * t*t);
+            obj.position = Vector3.Lerp(startPosition, target, t);
             t += Time.deltaTime / animationDuration;
             yield return null;
         }

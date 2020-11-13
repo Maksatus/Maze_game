@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 [RequireComponent(typeof(Rigidbody))]
 public class move_ : MonoBehaviour
 {
@@ -58,6 +59,25 @@ public class move_ : MonoBehaviour
         if(other.tag == "Death")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (other.tag.Equals("Victory"))
+        {
+            GamesManager.GameIsVictory = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("MovePlatform"))
+        {
+            this.transform.parent = collision.transform;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("MovePlatform"))
+        {
+            this.transform.parent = null;
         }
     }
 }

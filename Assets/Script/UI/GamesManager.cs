@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class GamesManager : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool GameIsVictory = false;
     public GameObject pauseMenuUI;
+    public GameObject victoryUI;
     public GameObject JoystickActiv;
 
     private void Update()
@@ -12,6 +14,10 @@ public class GamesManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
+        }
+        if (GameIsVictory)
+        {
+            Victory();
         }
     }
 
@@ -38,9 +44,19 @@ public class GamesManager : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+    public void Victory()
+    {
+        JoystickActiv.SetActive(false);
+        victoryUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsVictory = false;
+        GameIsPaused = true;
+    }
+
     public void Return()
     {
         pauseMenuUI.SetActive(false);
+        victoryUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         JoystickActiv.SetActive(true);

@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Joystick
   - Death
+  - MovePlatform
+  - Victory
   layers:
   - Default
   - TransparentFX
