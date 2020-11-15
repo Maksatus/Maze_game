@@ -8,8 +8,8 @@ public class move_ : MonoBehaviour
     public float Speed = 10f;
     private Rigidbody _rb;
     public Quaternion calibrationQuaternion;
-    public Joystick joystickHorizontal;
-    public Joystick joystickVertical;
+    public Joystick joystickUI;
+    //public Joystick joystickVertical;
     [Header("Инвертирование движение")]
     public bool Snap = false;
 
@@ -52,7 +52,7 @@ public class move_ : MonoBehaviour
         //    acceleration.Normalize();
         //  Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
 
-        Vector3 direction = Vector3.forward * joystickVertical.Vertical + Vector3.right * joystickHorizontal.Horizontal;
+        Vector3 direction = Vector3.forward * joystickUI.Vertical + Vector3.right * joystickUI.Horizontal;
         if(Snap)
         {
             direction = (-1) * direction; 
