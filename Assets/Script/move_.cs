@@ -10,6 +10,8 @@ public class move_ : MonoBehaviour
     public Quaternion calibrationQuaternion;
     public Joystick joystickHorizontal;
     public Joystick joystickVertical;
+    [Header("Инвертирование движение")]
+    public bool Snap = false;
 
     void Start()
     {
@@ -51,6 +53,10 @@ public class move_ : MonoBehaviour
         //  Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
 
         Vector3 direction = Vector3.forward * joystickVertical.Vertical + Vector3.right * joystickHorizontal.Horizontal;
+        if(Snap)
+        {
+            direction = (-1) * direction; 
+        }
         _rb.AddForce(direction * Speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
     }
 
