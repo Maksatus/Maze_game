@@ -8,13 +8,13 @@ public class move_ : MonoBehaviour
     public float Speed = 10f;
     private Rigidbody _rb;
     public Quaternion calibrationQuaternion;
-    public Joystick joystick;
+    public Joystick joystickHorizontal;
+    public Joystick joystickVertical;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         CalibtationAccelerometr();
-        joystick = FindObjectOfType<Joystick>(); 
     }
 
     // обратите внимание что все действия с физикой
@@ -50,8 +50,8 @@ public class move_ : MonoBehaviour
         //    acceleration.Normalize();
         //  Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
 
-        Vector3 movement = new Vector3(joystick.Horizontal, 0.0f, joystick.Vertical);
-        _rb.AddForce(movement * Speed);
+        Vector3 direction = Vector3.forward * joystickVertical.Vertical + Vector3.right * joystickHorizontal.Horizontal;
+        _rb.AddForce(direction * Speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
     }
 
     private void OnTriggerEnter(Collider other)

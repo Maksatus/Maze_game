@@ -7,7 +7,7 @@ public class GamesManager : MonoBehaviour
     public static bool GameIsVictory = false;
     public GameObject pauseMenuUI;
     public GameObject victoryUI;
-    public GameObject JoystickActiv;
+    public GameObject GameUI;
 
     private void Update()
     {
@@ -26,7 +26,7 @@ public class GamesManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        JoystickActiv.SetActive(true);
+        GameUI.SetActive(true);
     }
     public void LoadMenu()
     {
@@ -39,14 +39,14 @@ public class GamesManager : MonoBehaviour
     }
     void Pause_menu()
     {
-        JoystickActiv.SetActive(false);
+        GameUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
     public void Victory()
     {
-        JoystickActiv.SetActive(false);
+        GameUI.SetActive(false);
         victoryUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsVictory = false;
@@ -59,7 +59,7 @@ public class GamesManager : MonoBehaviour
         victoryUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        JoystickActiv.SetActive(true);
+        GameUI.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Pause()
