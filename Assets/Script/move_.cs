@@ -11,7 +11,9 @@ public class move_ : MonoBehaviour
     public Joystick joystickUI;
     //public Joystick joystickVertical;
     [Header("Инвертирование движение")]
-    public bool Snap = false;
+    public   bool Snap = false;
+
+    public static bool MoveControls;
 
     void Start()
     {
@@ -46,16 +48,22 @@ public class move_ : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);*/
 
         // android
-        //Vector3 accelerationRaw = Input.acceleration;
-        //Vector3 acceleration = FixeAcceleration(accelerationRaw);
-        //if (acceleration.sqrMagnitude > 1)
-        //    acceleration.Normalize();
-        //  Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
-
-        Vector3 direction = Vector3.forward * joystickUI.Vertical + Vector3.right * joystickUI.Horizontal;
-        if(Snap)
+        Vector3 direction = new Vector3();
+        if (MoveControls)
         {
-            direction = (-1) * direction; 
+            Vector3 accelerationRaw = Input.acceleration;
+            Vector3 acceleration = FixeAcceleration(accelerationRaw);
+            if (acceleration.sqrMagnitude > 1)
+                acceleration.Normalize();
+             direction = new Vector3(acceleration.x, 0.0f, acceleration.y);
+        }
+        else
+        {
+             direction = Vector3.forward * joystickUI.Vertical + Vector3.right * joystickUI.Horizontal;
+        }
+        if (Snap)
+        {
+            direction = (-1) * direction;
         }
         _rb.AddForce(direction * Speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
     }

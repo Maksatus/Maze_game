@@ -14,16 +14,13 @@ public class UIManager : MonoBehaviour
         levelMenu.DOAnchorPos(new Vector2(0,0), 0.25f);
     }
 
-    public void setting()
+    public void ControlsJoyskick()
     {
-        mainMenu.DOAnchorPos(new Vector2(-2070, 0), 0.25f);
-        settingMenu.DOAnchorPos(new Vector2(0, 0), 0.25f);
+        move_.MoveControls = false;
     }
-
-    public void closeSetting()
+    public void ControlsAccelerometer()
     {
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 0.25f);
-        settingMenu.DOAnchorPos(new Vector2(2070, 0), 0.25f);
+        move_.MoveControls = true;
     }
 
     public void closeLevel()

@@ -8,6 +8,18 @@ public class GamesManager : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject victoryUI;
     public GameObject GameUI;
+    public GameObject joystickUI;
+
+
+    private void Start()
+    {
+        if (move_.MoveControls)
+        {
+            joystickUI.SetActive(false);
+        }
+       
+    }
+
 
     private void Update()
     {
