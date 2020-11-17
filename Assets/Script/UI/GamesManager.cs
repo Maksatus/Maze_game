@@ -20,7 +20,6 @@ public class GamesManager : MonoBehaviour
        
     }
 
-
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -40,15 +39,18 @@ public class GamesManager : MonoBehaviour
         GameIsPaused = false;
         GameUI.SetActive(true);
     }
+
     public void LoadMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Start");
     }
+
     public void QuitGame()
     {
         Application.Quit();
     }
+
     void Pause_menu()
     {
         GameUI.SetActive(false);
@@ -56,6 +58,7 @@ public class GamesManager : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
     public void Victory()
     {
         GameUI.SetActive(false);
@@ -74,6 +77,15 @@ public class GamesManager : MonoBehaviour
         GameUI.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void Next()
+    {
+        GameIsPaused = false;
+        GameUI.SetActive(true);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void Pause()
     {
         Pause_menu();
