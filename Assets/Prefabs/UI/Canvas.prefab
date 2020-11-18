@@ -297,6 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3078454227249943179}
   - component: {fileID: 3078454227249943180}
+  - component: {fileID: 1718899797866686246}
   m_Layer: 0
   m_Name: UIScript
   m_TagString: Untagged
@@ -334,6 +335,21 @@ MonoBehaviour:
   victoryUI: {fileID: 868090103087240875}
   GameUI: {fileID: 4439673547003431968}
   joystickUI: {fileID: 6495847674238294442}
+--- !u!114 &1718899797866686246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3078454227249943181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343d11962d3bb974c89a39b49d37f811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStart: 0
+  timeText: {fileID: 6476772696361384005}
+  timeVictory: {fileID: 6604255431638749960}
 --- !u!1 &3078454227336814430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1142,6 @@ GameObject:
   - component: {fileID: 50327031081306744}
   - component: {fileID: 5830297589339476341}
   - component: {fileID: 9052265654741515808}
-  - component: {fileID: 6861762666336655790}
   m_Layer: 5
   m_Name: GameUi
   m_TagString: Untagged
@@ -1194,21 +1209,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6861762666336655790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439673547003431968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 343d11962d3bb974c89a39b49d37f811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStart: 0
-  timeText: {fileID: 6476772696361384005}
-  timeVictory: {fileID: 6604255431638749960}
 --- !u!1 &4792487700054108646
 GameObject:
   m_ObjectHideFlags: 0
