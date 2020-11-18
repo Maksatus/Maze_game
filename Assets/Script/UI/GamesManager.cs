@@ -75,6 +75,7 @@ public class GamesManager : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         GameUI.SetActive(true);
+        Timer.start = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

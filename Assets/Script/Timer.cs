@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        timeText.text = timeStart.ToString("F2");
+        timeText.text = timeStart.ToString("F2").Replace(",", ":");
     }
 
     void Update()
@@ -21,11 +21,11 @@ public class Timer : MonoBehaviour
         if (start)
         {
             timeStart += Time.deltaTime;
-            timeText.text = timeStart.ToString("F2");
+            timeText.text = timeStart.ToString("F2").Replace(",",":");
         }
         else
         {
-            timeVictory.text ="Time: " + timeStart.ToString("F2");
+            timeVictory.text ="Time: " + timeStart.ToString("F2").Replace(",", ":");
         }
     }
 }
