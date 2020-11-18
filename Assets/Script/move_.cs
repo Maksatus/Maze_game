@@ -76,7 +76,12 @@ public class move_ : MonoBehaviour
         }
         if (other.tag.Equals("Victory"))
         {
+            Timer.start = false;
             GamesManager.GameIsVictory = true;
+        }
+        if (other.tag.Equals("Start"))
+        {
+            Timer.start = true;
         }
         if (other.tag.Equals("MovePlatform"))
         {

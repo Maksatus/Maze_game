@@ -9,6 +9,7 @@ TagManager:
   - Death
   - MovePlatform
   - Victory
+  - Start
   layers:
   - Default
   - TransparentFX
