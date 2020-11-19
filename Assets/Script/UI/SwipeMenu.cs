@@ -30,26 +30,26 @@ public class SwipeMenu : MonoBehaviour
                 if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
                 {
                     scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.1f);
+                    Debug.LogWarning("Current Selected Level" + i);
                 }
             }
         }
 
-
-      /*  for (int i = 0; i < pos.Length; i++)
+        for (int i = 0; i < pos.Length; i++)
         {
             if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
             {
                 Debug.LogWarning("Current Selected Level" + i);
-                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.1f);
+                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(0.75f, 0.75f), 0.1f);
                 for (int j = 0; j < pos.Length; j++)
                 {
                     if (j != i)
                     {
-                        transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
+                        transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.6f, 0.6f), 0.1f);
                     }
                 }
-            }*/
+            }
+        }
     }
-
-
 }
+
