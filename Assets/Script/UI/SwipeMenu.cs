@@ -30,7 +30,6 @@ public class SwipeMenu : MonoBehaviour
                 if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
                 {
                     scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.1f);
-                    Debug.LogWarning("Current Selected Level" + i);
                 }
             }
         }
