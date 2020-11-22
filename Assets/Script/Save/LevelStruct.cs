@@ -4,7 +4,7 @@
 
     public struct LevelStruct
     {
-        public int time;
-        public string name;
+        public float time;
+        public int idLevel;
     }
 }
