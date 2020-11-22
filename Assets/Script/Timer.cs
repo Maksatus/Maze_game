@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
             var save = gameObject.AddComponent<GameCore>();
             level.idLevel = SceneManager.GetActiveScene().buildIndex;
             level.time = timeStart;
+            
             save.SaveToFille(level);
         }
     }

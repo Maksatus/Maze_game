@@ -1,7 +1,13 @@
 {
-    "lastLevelIndex": 0,
-    "level": {
-        "time": 2.699580430984497,
-        "idLevel": 2
-    }
+    "lastLevelIndex": 2,
+    "level": [
+        {
+            "time": 0.0,
+            "idLevel": 0
+        },
+        {
+            "time": 2.6794235706329347,
+            "idLevel": 2
+        }
+    ]
 }

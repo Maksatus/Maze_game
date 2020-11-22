@@ -11,7 +11,8 @@ public class GameCore : MonoBehaviour
 
 
     [Header("Leves")]
-    [SerializeField] private int lastLevelIndex;
+    [SerializeField] private int lastLevelIndex = 2;
+    [SerializeField] private LevelStruct[] levelStruct;
 
 
     private void Awake()
@@ -21,17 +22,21 @@ public class GameCore : MonoBehaviour
 #else
         savePath = Path.Combine(Application.dataPath,saveFileName);
 #endif
-       // LoadFromFille();
     }
 
     public void SaveToFille(LevelStruct levelImport)
     {
+        LoadFromFille();
         GameCoreStruct gameCore = new GameCoreStruct
         {
-            lastLevelIndex = this.lastLevelIndex,
-            level = levelImport
+            lastLevelIndex = this.lastLevelIndex
         };
+        Debug.Log($"Всего: {lastLevelIndex}, импортируем: {levelImport.idLevel-1}, Время: {levelImport.time}");
         
+        gameCore.level = new LevelStruct[lastLevelIndex];
+
+        gameCore.level[levelImport.idLevel - 1] = levelImport;
+
         string json = JsonUtility.ToJson(gameCore, true);
 
         try
@@ -43,7 +48,7 @@ public class GameCore : MonoBehaviour
             Debug.Log($"Error {e}");
         }
     }
- /*   
+  
     public void LoadFromFille()
     { 
         if (!File.Exists(savePath))
@@ -56,13 +61,14 @@ public class GameCore : MonoBehaviour
             string json = File.ReadAllText(savePath);
             GameCoreStruct gameCoreStruct = JsonUtility.FromJson<GameCoreStruct>(json);
             this.lastLevelIndex = gameCoreStruct.lastLevelIndex;
+            this.levelStruct = gameCoreStruct.level;
         }
         catch (Exception e)
         {
             Debug.Log(e);
         }
     }
- */
+
 }
 
 namespace Structs
@@ -72,6 +78,6 @@ namespace Structs
     public struct GameCoreStruct
     {
          public int lastLevelIndex;
-         public LevelStruct level;
+         public LevelStruct[] level;
     }
 }
