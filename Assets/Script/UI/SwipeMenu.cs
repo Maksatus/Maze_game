@@ -37,8 +37,7 @@ public class SwipeMenu : MonoBehaviour
         for (int i = 0; i < pos.Length; i++)
         {
             if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
-            {
-                Debug.LogWarning("Current Selected Level" + i);
+            {             
                 transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(0.75f, 0.75f), 0.1f);
                 for (int j = 0; j < pos.Length; j++)
                 {

@@ -5084,9 +5084,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd503b620569234cac45d44b88df226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastLevelIndex: 0
-  level:
-  - time: 0
-    name: 
-  - time: 0
-    name: 
+  lastLevelIndex: 2
+  levelStruct: []

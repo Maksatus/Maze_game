@@ -22,6 +22,7 @@ public class GameCore : MonoBehaviour
 #else
         savePath = Path.Combine(Application.dataPath,saveFileName);
 #endif
+
     }
 
     public void SaveToFille(LevelStruct levelImport)
@@ -29,12 +30,16 @@ public class GameCore : MonoBehaviour
         LoadFromFille();
         GameCoreStruct gameCore = new GameCoreStruct
         {
-            lastLevelIndex = this.lastLevelIndex
+            lastLevelIndex = this.lastLevelIndex,
+            level = new LevelStruct[lastLevelIndex]
         };
         Debug.Log($"Всего: {lastLevelIndex}, импортируем: {levelImport.idLevel-1}, Время: {levelImport.time}");
-        
-        gameCore.level = new LevelStruct[lastLevelIndex];
 
+        if (levelStruct!=null)
+        {
+            gameCore.level = levelStruct;
+        }
+        
         gameCore.level[levelImport.idLevel - 1] = levelImport;
 
         string json = JsonUtility.ToJson(gameCore, true);
@@ -62,6 +67,7 @@ public class GameCore : MonoBehaviour
             GameCoreStruct gameCoreStruct = JsonUtility.FromJson<GameCoreStruct>(json);
             this.lastLevelIndex = gameCoreStruct.lastLevelIndex;
             this.levelStruct = gameCoreStruct.level;
+            Debug.Log(json);
         }
         catch (Exception e)
         {
