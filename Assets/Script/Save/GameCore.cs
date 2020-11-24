@@ -1,8 +1,8 @@
 ﻿using Structs;
 using UnityEngine;
 using System;
-using System.IO;    
-
+using System.IO;
+using UnityEngine.UI;
 
 public class GameCore : MonoBehaviour
 {
@@ -14,20 +14,22 @@ public class GameCore : MonoBehaviour
     [SerializeField] private int lastLevelIndex = 2;
     [SerializeField] private LevelStruct[] levelStruct;
 
+    [Header("Text timer")]
+    [SerializeField] private Text[] textTimer;
+
 
     private void Awake()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-    savePath = Path.Combine(Application.persistentDataPath,saveFileName)
+        savePath = Path.Combine(Application.persistentDataPath,saveFileName);
 #else
         savePath = Path.Combine(Application.dataPath,saveFileName);
 #endif
-
+        LoadFromFille();
     }
 
     public void SaveToFille(LevelStruct levelImport)
     {
-        LoadFromFille();
         GameCoreStruct gameCore = new GameCoreStruct
         {
             lastLevelIndex = this.lastLevelIndex,
@@ -38,10 +40,16 @@ public class GameCore : MonoBehaviour
         if (levelStruct!=null)
         {
             gameCore.level = levelStruct;
+            if (levelStruct[levelImport.idLevel - 1].time > levelImport.time || levelStruct[levelImport.idLevel - 1].time == 0)
+            {
+                gameCore.level[levelImport.idLevel - 1] = levelImport;
+            }
+        }
+        else
+        {
+            gameCore.level[levelImport.idLevel - 1] = levelImport;
         }
         
-        gameCore.level[levelImport.idLevel - 1] = levelImport;
-
         string json = JsonUtility.ToJson(gameCore, true);
 
         try
@@ -67,7 +75,13 @@ public class GameCore : MonoBehaviour
             GameCoreStruct gameCoreStruct = JsonUtility.FromJson<GameCoreStruct>(json);
             this.lastLevelIndex = gameCoreStruct.lastLevelIndex;
             this.levelStruct = gameCoreStruct.level;
-            Debug.Log(json);
+            for (int i = 0; i < textTimer.Length; i++)
+            {
+                if (levelStruct[i].time>0)
+                {
+                    textTimer[i].text = "Best time: " + levelStruct[i].time.ToString("F2").Replace(",", ":");
+                }
+            }
         }
         catch (Exception e)
         {
