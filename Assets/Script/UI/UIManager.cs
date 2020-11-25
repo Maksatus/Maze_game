@@ -1,14 +1,31 @@
 ﻿using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public RectTransform mainMenu, levelMenu, shopMenu;
-   
-    private void Start()
+
+    private int levelUnLock;
+    [SerializeField] private Button[] buttons;
+
+    void Start()
     {
-        mainMenu.DOAnchorPos(Vector2.zero,0.25f);
+        mainMenu.DOAnchorPos(Vector2.zero, 0.25f);
+
+        levelUnLock = PlayerPrefs.GetInt("levels", 1);
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = false;
+        }
+
+        for (int i = 0; i < levelUnLock; i++)
+        {
+            buttons[i].interactable = true;
+        }
     }
+
     public void level()
     {
         mainMenu.DOAnchorPos(new Vector2(-2070, 0), 0.25f);

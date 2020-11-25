@@ -78,6 +78,7 @@ public class move_ : MonoBehaviour
         if (other.tag.Equals("Victory"))
         {
             Timer.start = false;
+            UnLockLevel();
             GamesManager.GameIsVictory = true;
         }
         if (other.tag.Equals("Start"))
@@ -87,6 +88,16 @@ public class move_ : MonoBehaviour
         if (other.tag.Equals("MovePlatform"))
         {
             this.transform.parent = other.transform;
+        }
+    }
+
+    public void UnLockLevel()
+    {
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentLevel >= PlayerPrefs.GetInt("levels"))
+        {
+            PlayerPrefs.SetInt("levels", currentLevel + 1);
         }
     }
 

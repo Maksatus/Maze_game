@@ -1683,6 +1683,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 356672031}
@@ -1714,6 +1718,38 @@ PrefabInstance:
       propertyPath: panel.Array.data[4]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[4]
+      value: 
+      objectReference: {fileID: 965560234}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[5]
+      value: 
+      objectReference: {fileID: 1408355786}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[6]
+      value: 
+      objectReference: {fileID: 1180353077}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[7]
+      value: 
+      objectReference: {fileID: 1885092658}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 965560234}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1408355786}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1180353077}
+    - target: {fileID: 1264233179411624209, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
+      propertyPath: buttons.Array.data[3]
+      value: 
+      objectReference: {fileID: 1885092658}
     - target: {fileID: 2488174953865001828, guid: 89ca17b79add1bb4098da1ebcf214a7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3095,7 +3131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9822c25212eee4e8344455066d66a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollbar: {fileID: 533256940}
+  scrollbar: {fileID: 533256942}
   space: 1.25
 --- !u!1 &1408355784
 GameObject:
@@ -5043,6 +5079,11 @@ MonoBehaviour:
   mainMenu: {fileID: 1919458481}
   levelMenu: {fileID: 356672032}
   shopMenu: {fileID: 1185637130}
+  buttons:
+  - {fileID: 965560234}
+  - {fileID: 1408355786}
+  - {fileID: 1180353077}
+  - {fileID: 1885092658}
 --- !u!4 &1939467326
 Transform:
   m_ObjectHideFlags: 0
@@ -5070,7 +5111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastLevelIndex: 2
-  levelStruct: []
   textTimer:
   - {fileID: 1818636279}
   - {fileID: 1963952358}

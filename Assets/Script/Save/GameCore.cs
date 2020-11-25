@@ -9,10 +9,8 @@ public class GameCore : MonoBehaviour
     private string savePath;
     private string saveFileName = "data.json";
 
-
-    [Header("Leves")]
     [SerializeField] private int lastLevelIndex = 2;
-    [SerializeField] private LevelStruct[] levelStruct;
+    private LevelStruct[] levelStruct;
 
     [Header("Text timer")]
     [SerializeField] private Text[] textTimer;

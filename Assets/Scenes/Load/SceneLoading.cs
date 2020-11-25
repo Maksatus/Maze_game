@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class SceneLoading : MonoBehaviour
 {
-   // [Header("Загружаемая сцена:")]
     private int sceneID;
     [Space]
     public Image LoadingImg;
     public Text progressText;
-    [Header("Что нужно скрыть:")]
-    public GameObject[] panel;
     public GameObject loadingScren;
     public Text tapText;
 
@@ -19,11 +16,6 @@ public class SceneLoading : MonoBehaviour
     {
         sceneID = id;
         loadingScren.SetActive(true);
-        for (int i = 0; i < panel.Length; i++)
-        {
-            panel[i].SetActive(false);
-        }
-       
         StartCoroutine(AsyncLoad());
     }
 
@@ -37,9 +29,8 @@ public class SceneLoading : MonoBehaviour
             if (!asyncLoad.allowSceneActivation)
             {
                 float progress = asyncLoad.progress / 0.9f;
-                //LoadingImg.fillAmount = progress;
                 LoadingImg.fillAmount = Mathf.Lerp(LoadingImg.fillAmount, progress,
-               Time.deltaTime * 5);
+                Time.deltaTime * 5);
                 progressText.text = string.Format("{0:0}%", progress * 100);
                 tapText.text = string.Format("Tap to screen!");
                 if (Input.anyKeyDown)

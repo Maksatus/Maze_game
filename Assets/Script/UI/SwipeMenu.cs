@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class SwipeMenu : MonoBehaviour
 {
     [SerializeField]
-    private GameObject scrollbar;
+    private Scrollbar scrollbar;
     private float scrollPos = 0;
     private float[] pos;
     [Space(2)]
@@ -21,7 +21,7 @@ public class SwipeMenu : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
-            scrollPos = scrollbar.GetComponent<Scrollbar>().value;
+            scrollPos = scrollbar.value;
         }
         else
         {
@@ -29,7 +29,7 @@ public class SwipeMenu : MonoBehaviour
             {
                 if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
                 {
-                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.1f);
+                    scrollbar.value = Mathf.Lerp(scrollbar.value, pos[i], 0.1f);
                 }
             }
         }
