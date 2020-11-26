@@ -38,7 +38,7 @@ public class SwipeMenu : MonoBehaviour
         {
             if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
             {             
-                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(0.75f, 0.75f), 0.1f);
+                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                 for (int j = 0; j < pos.Length; j++)
                 {
                     if (j != i)
