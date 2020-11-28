@@ -7,13 +7,18 @@ public class MoveThorns : MonoBehaviour
     public float Time = 2;
     public float dist = 2;
     [Header("по какой оси передвигать(true=x)")]
-    public bool flag = true;
+    public bool flagXorY = true;
+    public bool flagZ = false;
 
     private void Start()
     {
-        if (flag)
+        if (flagXorY)
         {
             StartCoroutine(MoveX());
+        }
+        else if (flagZ)
+        {
+            StartCoroutine(MoveZ());
         }
         else
         {
@@ -37,6 +42,15 @@ public class MoveThorns : MonoBehaviour
         {
             yield return StartCoroutine(Utils.MoveToTarget(EnemyPrefab.transform, new Vector3(EnemyPrefab.transform.position.x, EnemyPrefab.transform.position.y+dist, EnemyPrefab.transform.position.z)));
             yield return StartCoroutine(Utils.MoveToTarget(EnemyPrefab.transform, new Vector3(EnemyPrefab.transform.position.x, EnemyPrefab.transform.position.y - dist, EnemyPrefab.transform.position.z)));
+            yield return new WaitForSeconds(Time);
+        }
+    }
+    private IEnumerator MoveZ()
+    {
+        while (true)
+        {
+            yield return StartCoroutine(Utils.MoveToTarget(EnemyPrefab.transform, new Vector3(EnemyPrefab.transform.position.x, EnemyPrefab.transform.position.y , EnemyPrefab.transform.position.z + dist)));
+            yield return StartCoroutine(Utils.MoveToTarget(EnemyPrefab.transform, new Vector3(EnemyPrefab.transform.position.x, EnemyPrefab.transform.position.y , EnemyPrefab.transform.position.z - dist)));
             yield return new WaitForSeconds(Time);
         }
     }
