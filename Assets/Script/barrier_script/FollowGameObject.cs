@@ -17,11 +17,11 @@ public class FollowGameObject : MonoBehaviour
     void FixedUpdate()
     {
         speed = (target.position - oldPosition);
-        if (speed.z<0)
+        if (speed.z<0 || speed.x < 0)
         {
             transform.position = new Vector3(target.position.x + offset.x, target.position.y + offset.y, target.position.z + offset.z);
         }
-        if (speed.z > 0)
+        if (speed.z > 0|| speed.x > 0)
         {
             transform.position = new Vector3(target.position.x - offset.x, target.position.y - offset.y*(-1), target.position.z - offset.z);
         }
