@@ -12,6 +12,30 @@ ModelImporter:
   - first:
       74: -6447349345188815056
     second: SEKIRA.02_low|Cube.003Action.002
+  - first:
+      74: 700758068958501387
+    second: Sekira.02_low|Cube.003Action
+  - first:
+      74: 3561089954807993619
+    second: Sekira.02_low|Cube.003Action.001
+  - first:
+      74: 2690256005154785235
+    second: Sekira.02_low|Cube.003Action.002
+  - first:
+      74: -5300097334330192805
+    second: Sekira.02_low|Cube.003Action.003
+  - first:
+      74: -5243162198591723487
+    second: Sekira.03_low|Cube.003Action
+  - first:
+      74: -1528504273650071601
+    second: Sekira.03_low|Cube.003Action.001
+  - first:
+      74: 39963057073723936
+    second: Sekira.03_low|Cube.003Action.002
+  - first:
+      74: 3677779506353305660
+    second: Sekira.03_low|Cube.003Action.003
   externalObjects: {}
   materials:
     materialImportMode: 1
